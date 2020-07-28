@@ -4,10 +4,15 @@ body {
 }
 
 .file-upload {
-  background-color: #ffffff;
-  width: 600px;
+
   margin: 0 auto;
   padding: 20px;
+  height: 50vw;
+  position: relative;
+  object-fit: contain;
+  border-radius: 10px;
+  border: dashed 1.5px #f6f7fa;
+  background-color: #f6f7fa;
 }
 
 .file-upload-btn {
@@ -55,9 +60,9 @@ body {
 
 .image-upload-wrap {
   width: 65%;
+  height: 65%;
   margin: 0 auto;
   margin-top: 20px;
-  border: 4px dashed #1FB264;
   position: relative;
   object-fit: contain;
   border-radius: 10px;
@@ -77,7 +82,7 @@ body {
 }
 
 .drag-text {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .drag-text h3 {
