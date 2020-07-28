@@ -114,3 +114,7 @@ body {
   border: 0;
   transition: all .2s ease;
 }
+
+.nav-distance {
+  padding: 2.1% 7.7%;
+}
