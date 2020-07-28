@@ -54,15 +54,21 @@ body {
 }
 
 .image-upload-wrap {
+  width: 65%;
+  margin: 0 auto;
   margin-top: 20px;
   border: 4px dashed #1FB264;
   position: relative;
+  object-fit: contain;
+  border-radius: 10px;
+  border: dashed 1.5px #35465d;
+  background-color: #ffffff;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
-  background-color: #1FB264;
-  border: 4px dashed #ffffff;
+  background-color: #35465d;
+  border: 1.5px dashed #ffffff;
 }
 
 .image-title-wrap {
@@ -75,10 +81,13 @@ body {
 }
 
 .drag-text h3 {
+  width: 70%;
+  height: 70%;
   font-weight: 100;
   text-transform: uppercase;
-  color: #15824B;
-  padding: 60px 0;
+  font-size: 1.5rem;
+  color: #35465d;
+  margin: 0 auto;
 }
 
 .file-upload-image {
@@ -138,11 +147,12 @@ body {
 }
 
 /* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   html {
     font-size: 10px;
   }
-    .navbar-brand {
-        font-size: 2rem;
-    }
+      .navbar-brand {
+          font-size: 2rem;
+      }
+
 }
