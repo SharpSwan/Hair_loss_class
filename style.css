@@ -118,3 +118,31 @@ body {
 .nav-distance {
   padding: 2.1% 7.7%;
 }
+
+.section {
+  margin-top: 100px;
+}
+
+.title {
+  font-family: NanumSquareR;
+  line-height: 1.67;
+  text-align: center;
+  color: #35465d;
+}
+
+.subtitle {
+  font-family: NanumSquareR;
+  line-height: 1.53;
+  text-align: center;
+  color: #35465d;
+}
+
+/* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
