@@ -73,7 +73,9 @@
           </div>
         </div>
         <div class="file-upload-content">
+          <p class="result-message"></p>
           <img class="file-upload-image" id = "face-image" src="#" alt="your image" />
+          <div id="label-container"></div>
           <div class="image-title-wrap">
             <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
           </div>
@@ -81,7 +83,6 @@
       </div>
       <!-- File upload code finish -->
 
-      <div id="label-container"></div>
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
       <script type="text/javascript">
@@ -118,6 +119,55 @@
               // predict can take in an image, video or canvas html element
               var image = document.getElementById("face-image")
               const prediction = await model.predict(image, false);
+              prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+              console.log(prediction[0].className)
+              var resultMessage;
+              switch(prediction[0].className) {
+                case "SM-강타라인":
+                  resultMessage = "SM 전통미남상"
+                  break;
+                case "SM-동해라인":
+                  resultMessage = "SM 공룡상"
+                  break;
+                case "SM-재중라인":
+                  resultMessage = "SM 강한 미남상"
+                  break;
+                case "SM-태민라인":
+                  resultMessage = "SM 태민상"
+                  break;
+                case "SM-성민라인":
+                  resultMessage = "SM 귀염상"
+                  break;
+                case "JYP-비 라인":
+                  resultMessage = "JYP 무쌍 미소"
+                  break;
+                case "JYP-택연 라인":
+                  resultMessage = "JYP 미남상"
+                  break;
+                case "YG-GD라인":
+                  resultMessage = "YG GD상"
+                  break;
+                case "FNC-공룡상":
+                  resultMessage = "FNC 보컬라인"
+                  break;
+                case "BIG HIT- 청량라인":
+                  resultMessage = "BIG HIT 청량 상"
+                  break;
+                case "플레디스- 예쁜 남자라인":
+                  resultMessage = "플레디스 여자보다 예쁜 남자"
+                  break;
+                case "큐브- 윤두준상":
+                  resultMessage = "큐브 윤두준 상"
+                  break;
+                case "못생김":
+                  resultMessage = "당신은 그냥 못생겼습니다"
+                  break;
+                case "판타지오- 미남상":
+                  resultMessage = "판타지오 차은우 서강준 급 미남상"
+                default:
+                  resultMessage = "알 수 없는 일입니다"
+              }
+              $('.result-message').html(resultMessage);
               for (let i = 0; i < maxPredictions; i++) {
                   const classPrediction =
                       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
