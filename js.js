@@ -14,7 +14,7 @@ function readURL(input) {
 
     reader.readAsDataURL(input.files[0]);
     init().then(()=>{
-      console.log("hi")
+      console.log("Finished");
       predict()
     });
   } else {

@@ -28,21 +28,21 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">쿠로마스크 유튜브 바로가기</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              다른 테스트 보기
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">탈모 진단 테스트</a>
+              <a class="dropdown-item" href="#">일본판 소속사 테스트</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">만든 놈 유튜브 가기</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">미정</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -92,7 +92,7 @@
           // the link to your model provided by Teachable Machine export panel
           const URL = "https://teachablemachine.withgoogle.com/models/AaP4gcij3/";
 
-          let model, webcam, labelContainer, maxPredictions;
+          let model, labelContainer, maxPredictions;
 
           // Load the image model and setup the webcam
           async function init() {
@@ -113,8 +113,6 @@
           }
 
 
-
-          // run the webcam image through the image model
           async function predict() {
               // predict can take in an image, video or canvas html element
               var image = document.getElementById("face-image")

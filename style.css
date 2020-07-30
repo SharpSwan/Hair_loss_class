@@ -3,6 +3,12 @@ body {
   background-color: #eeeeee;
 }
 
+.result-message {
+  font-weight: 300;
+  font-family: Tahoma;
+  font-size: 2.5rem;
+}
+
 .file-upload {
   margin: 0 auto;
   padding: 13% 3%;
